@@ -1,11 +1,16 @@
-import { useState } from "react";
+
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline text-red-700">Hello world!</h1>
+    <nav className="absolute top-0 left-0 right-0 w-full px-10 py-5 flex justify-between">
+      <h3 className="font-bold text-3xl ">QuestForGame</h3>
+
+      <ul className="flex gap-5">
+        <li><a href="">Home</a></li>
+      </ul>
+    </nav>
     </>
   );
 }
