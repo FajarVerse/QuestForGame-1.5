@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 .header-fixed {
-  @apply fixed z-[999] bg-black bg-opacity-70 backdrop-blur-sm shadow-[inset_0_-1px_0_0_rgba(0,0,0,0.1)];
+  @apply fixed;
+}
+
+.header-transition {
+  @apply z-[999] w-[96%] px-3 rounded-full translate-y-5 bg-white bg-opacity-70 backdrop-blur-sm shadow-md shadow-slate-300;
 }
 
 .hamburger-line {
