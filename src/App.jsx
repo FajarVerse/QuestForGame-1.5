@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import heroBg from "./assets/Image/hero_bg.jpg";
 
 function App() {
   const HamburgerToggleRef = useRef(null);
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <>
-      <header ref={HeaderFixedRef} className="absolute top-0 w-full h3">
+      <header ref={HeaderFixedRef} className="absolute top-0 w-full h3 z-50">
         <div
           className="w-full bg-transparent mx-auto px-5 py-4 transition duration-500 ease-in-out rounded-[0] lg:px-10"
           ref={HeaderRef}
@@ -35,9 +36,9 @@ function App() {
               <div className="px-1">
                 <a
                   href=""
-                  className="block font-bold text-xl text-second md:text-2xl lg:text-3xl"
+                  className="block font-bebas-neue font-bold text-2xl text-second md:text-2xl lg:text-3xl"
                 >
-                  QuestForGame
+                  Quest<span className="text-primary">ForGame</span>
                 </a>
               </div>
               <div className="flex items-center relative lg:hidden">
@@ -61,7 +62,7 @@ function App() {
                   <li className="group">
                     <a
                       href="#"
-                      className="text-base text-dark py-2 mx-8 flex lg:text-lg lg:text-white"
+                      className="font-comic-neue font-semibold text-base text-dark py-2 mx-8 flex lg:text-xl lg:text-white"
                     >
                       Home
                     </a>
@@ -69,7 +70,7 @@ function App() {
                   <li className="group">
                     <a
                       href="#"
-                      className="text-base text-dark py-2 mx-8 flex lg:text-lg lg:text-white"
+                      className="font-comic-neue font-semibold text-base text-dark py-2 mx-8 flex lg:text-xl lg:text-white"
                     >
                       Games
                     </a>
@@ -77,7 +78,7 @@ function App() {
                   <li className="group">
                     <a
                       href="#"
-                      className="text-base text-dark py-2 mx-8 flex lg:text-lg lg:text-white"
+                      className="font-comic-neue font-semibold text-base text-dark py-2 mx-8 flex lg:text-xl lg:text-white"
                     >
                       Movies
                     </a>
@@ -85,7 +86,7 @@ function App() {
                   <li className="group">
                     <a
                       href="#"
-                      className="text-base text-dark py-2 mx-8 flex lg:text-lg lg:text-white"
+                      className="font-comic-neue font-semibold text-base text-dark py-2 mx-8 flex lg:text-xl lg:text-white"
                     >
                       News
                     </a>
@@ -97,23 +98,26 @@ function App() {
         </div>
       </header>
       {/* Hero Section */}
-      <section className="pt-40 pb-32 bg-dark min-h-screen">
+      <section
+        className="pt-40 relative pb-32 bg-dark min-h-screen bg-center bg-cover bg-no-repeat backdrop-bg"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      >
         <div className="container max-w-full">
-          <div className="">
+          <div className="relative z-20">
             <div className="w-full px-5 mx-auto">
               <div className="text-center">
-                <h4 className="font-bold text-2xl text-primary mb-1 md:text-3xl lg:text-5xl">
+                <h4 className="font-comic-neue font-bold text-2xl text-primary mb-2 md:text-3xl lg:text-5xl xl:text-6xl">
                   Welcome To
                 </h4>
-                <h2 className="font-extrabold text-4xl text-second mb-3 md:text-5xl lg:text-7xl">
-                  QuestForGame
+                <h2 className="font-bebas-neue font-extrabold text-6xl text-second mb-2 md:text-8xl lg:text-9xl xl:text-[10rem]">
+                  Quest<span className="text-primary">ForGame</span>
                 </h2>
-                <p className="font-medium text-base text-description md:text-lg xl:text-xl">
+                <p className="font-comic-neue font-semibold text-sm text-description md:text-lg xl:text-xl">
                   Jelajahi dunia games, dan temukan game impian mu
                 </p>
               </div>
               <div className="flex justify-center">
-                <a className="block font-medium text-lg text-second px-5 py-2 bg-primary m-5 rounded-full group hover:opacity-70 transition duration-300 ease-in-out md:px-7 md:text-xl xl:px-8">
+                <a className="block font-comic-neue font-semibold text-xl text-second px-6 py-1 bg-primary m-5 rounded-full group hover:opacity-70 transition duration-300 ease-in-out md:px-7 md:text-xl xl:px-8">
                   Start!!{" "}
                   <span className="inline-block ml-0.5 rotate-[30deg] group-hover:-rotate-1 transition-all duration-300 ease-out">
                     🚀

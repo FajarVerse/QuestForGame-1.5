@@ -25,3 +25,9 @@
 .hamburger-active > span:nth-child(3) {
   @apply -rotate-45;
 }
+
+.backdrop-bg {
+  @apply after:content-[''] after:absolute after:top-0 after:left-0 after:bottom-0 after:right-0 after:bg-dark after:opacity-85 after:z-10;
+}
+
+
