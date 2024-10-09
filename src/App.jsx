@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import heroBg from "./assets/Image/hero_bg.jpg";
+import aboutImg from "./assets/Image/about_image.png";
 
 function App() {
   const HamburgerToggleRef = useRef(null);
@@ -36,7 +37,7 @@ function App() {
               <div className="px-1">
                 <a
                   href=""
-                  className="block font-bebas-neue font-bold text-2xl text-second md:text-2xl lg:text-3xl"
+                  className="block font-bebas-neue font-bold text-2xl text-second tracking-wide md:text-2xl lg:text-3xl"
                 >
                   Quest<span className="text-primary">ForGame</span>
                 </a>
@@ -97,6 +98,7 @@ function App() {
           </div>
         </div>
       </header>
+
       {/* Hero Section */}
       <section
         className="pt-40 relative pb-32 bg-dark min-h-screen bg-center bg-cover bg-no-repeat backdrop-bg"
@@ -109,7 +111,7 @@ function App() {
                 <h4 className="font-comic-neue font-bold text-2xl text-primary mb-2 md:text-3xl lg:text-5xl xl:text-6xl">
                   Welcome To
                 </h4>
-                <h2 className="font-bebas-neue font-extrabold text-6xl text-second mb-2 md:text-8xl lg:text-9xl xl:text-[10rem]">
+                <h2 className="font-bebas-neue font-extrabold text-6xl text-second tracking-wider mb-2 md:text-8xl lg:text-9xl xl:text-[10rem]">
                   Quest<span className="text-primary">ForGame</span>
                 </h2>
                 <p className="font-comic-neue font-semibold text-sm text-description md:text-lg xl:text-xl">
@@ -124,6 +126,51 @@ function App() {
                   </span>
                 </a>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pt-36 pb-32 bg-dark">
+        <div className="container">
+          <div className="flex flex-wrap w-full">
+            <div className="w-full px-5">
+              <h2 className="font-bebas-neue font-bold text-4xl text-second text-center tracking-wide mb-3">
+                Apa itu Quest<span className="text-primary">ForGame</span>??
+              </h2>
+              <p className="font-comic-neue font-medium text-base text-description mb-2">
+                <span className="font-semibold text-second">
+                  Quest<span className="text-primary">ForGame </span>
+                </span>
+                merupakan platfrom digital yang dibangun dengan berfokus kepada
+                panduan dan informasi terkini tentang berbagai games terupdate.
+              </p>
+              <p className="font-comic-neue font-medium text-base text-description mb-2">
+                Kami mengambil semua data game yang ada melalui API yang
+                disediakan oleh{" "}
+                <a
+                  href="https://rawg.io/apidocs"
+                  className="font-semibold italic"
+                >
+                  RAWG
+                </a>
+                , sehingga dapat terjamin keamanannya.
+              </p>
+              <p className="font-comic-neue font-medium text-base text-description mb-2">
+                Singkatnya,{" "}
+                <span className="font-semibold text-second">
+                  Quest<span className="text-primary">ForGame </span>
+                </span>
+                adalah tempat yang ideal bagi para gamer untuk menemukan dan
+                menjelajahi dunia game secara mendalam.
+              </p>
+            </div>
+            <div className="w-full px-5 mt-3">
+              <img
+                src={aboutImg}
+                alt="marvel-spiderman-2"
+                className="w-full object-cover drop-shadow"
+              />
             </div>
           </div>
         </div>
