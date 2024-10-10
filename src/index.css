@@ -7,7 +7,7 @@
 }
 
 .header-transition {
-  @apply z-[999] w-[96%] px-5 py-2 rounded-full translate-y-5 bg-dark shadow-sm shadow-primary;
+  @apply z-[999] w-[96%] px-5 py-2 rounded-full translate-y-5 bg-dark shadow-sm shadow-primary md:w-[90%] lg:w-4/5;
 }
 
 .hamburger-line {
