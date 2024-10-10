@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import heroBg from "./assets/Image/hero_bg.jpg";
+import heroBg from "./assets/Image/hero_image.jpg";
 import aboutImg from "./assets/Image/about_image.png";
 
 function App() {
@@ -131,32 +131,36 @@ function App() {
         </div>
       </section>
 
-      <section className="pt-36 pb-32 bg-dark">
+      <section className="pt-20 pb-14 bg-dark">
         <div className="container">
-          <div className="flex flex-wrap w-full">
-            <div className="w-full px-5">
-              <h2 className="font-bebas-neue font-bold text-4xl text-second text-center tracking-wide mb-3">
+          <div className="flex flex-wrap w-full lg:flex-row-reverse lg:items-center">
+            <div className="w-full px-5 lg:w-1/2 xl:w-[60%] xl:pr-10">
+              <h2 className="font-bebas-neue font-bold text-4xl text-second text-center tracking-wide mb-3 md:text-5xl lg:text-4xl lg:text-left xl:text-5xl">
                 Apa itu Quest<span className="text-primary">ForGame</span>??
               </h2>
-              <p className="font-comic-neue font-medium text-base text-description mb-2">
+              <p className="font-comic-neue font-medium text-base text-description mb-2 md:text-lg lg:text-base lg:mb-3 xl:text-xl">
                 <span className="font-semibold text-second">
                   Quest<span className="text-primary">ForGame </span>
                 </span>
                 merupakan platfrom digital yang dibangun dengan berfokus kepada
                 panduan dan informasi terkini tentang berbagai games terupdate.
+                Website ini bertujuan untuk membantu para gamers menemukan game
+                yang sesuai untuk mereka dengan menyediakan game dengan berbagai
+                macam kategori, mulai dari genre populer, game indie, hingga
+                judul-judul terpopuler.
               </p>
-              <p className="font-comic-neue font-medium text-base text-description mb-2">
+              <p className="font-comic-neue font-medium text-base text-description mb-2 md:text-lg lg:text-base lg:mb-3 xl:text-xl">
                 Kami mengambil semua data game yang ada melalui API yang
                 disediakan oleh{" "}
                 <a
                   href="https://rawg.io/apidocs"
-                  className="font-semibold italic"
+                  className="font-semibold italic cursor-pointer"
                 >
                   RAWG
                 </a>
                 , sehingga dapat terjamin keamanannya.
               </p>
-              <p className="font-comic-neue font-medium text-base text-description mb-2">
+              <p className="font-comic-neue font-medium text-base text-description mb-2 md:text-lg lg:text-base lg:mb-3 xl:text-xl">
                 Singkatnya,{" "}
                 <span className="font-semibold text-second">
                   Quest<span className="text-primary">ForGame </span>
@@ -165,11 +169,11 @@ function App() {
                 menjelajahi dunia game secara mendalam.
               </p>
             </div>
-            <div className="w-full px-5 mt-3">
+            <div className="w-full px-5 mt-3 lg:w-1/2 xl:w-2/5">
               <img
                 src={aboutImg}
                 alt="marvel-spiderman-2"
-                className="w-full object-cover drop-shadow"
+                className="w-full mx-auto object-cover drop-shadow md:w-3/4 lg:w-[90%] xl:w-full"
               />
             </div>
           </div>
