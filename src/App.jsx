@@ -131,7 +131,7 @@ function App() {
             <img
               src={aboutImg}
               alt="marvel-spiderman-2"
-              className="w-full mx-auto object-cover drop-shadow md:w-3/4 lg:w-[90%] xl:w-full"
+              className="w-full mx-auto object-cover drop-shadow-custom md:w-3/4 lg:w-[90%] xl:w-full"
             />
           </div>
         </div>
@@ -141,15 +141,37 @@ function App() {
         <div className="w-full px-5 flex flex-wrap">
           <div className="w-full">
             <Header className="font-bebas-neue text-white text-4xl">
-              Game Terbaru <span className="text-primary">Minggu Ini</span>
+              Jelajahi Rilisan{" "}
+              <span className="text-primary">Game Terupdate</span>
             </Header>
           </div>
           <div className="w-full py-3 flex flex-wrap">
             <div className="w-full">
-              <img src={''} alt="" />
+              <img src={""} alt="" />
             </div>
-            <div className="flex overflow-hidden">
-              <div className=""></div>
+            <div className="w-full px-5 py-5 flex overflow-hidden gap-3">
+              <div className="relative w-44 h-[15.5rem] bg-white rounded-lg overflow-hidden border-[3px] border-lightSunset drop-shadow-xl box-shadow">
+                <div className="w-full h-full">
+                  <img
+                    src={heroBg}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute bottom-0 w-full h-1/3 px-4 py-1 bg-sunset rounded-t-2xl border-t-[3px] border-lightSunset">
+                  <h3 className="font-bebas-neue font-bold text-2xl text-dark tracking-wide mb-2">
+                    Game
+                  </h3>
+                  <div className="w-full flex justify-between">
+                    <p className="font-comic-neue font-extrabold text-base text-slate-800">
+                      2022
+                    </p>
+                    <p className="font-comic-neue font-extrabold text-base text-slate-800">
+                      ⭐ 4.5
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

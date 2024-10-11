@@ -9,6 +9,8 @@ export default {
     extend: {
       colors: {
         primary: "#ff8906",
+        sunset: "#ffaa33 ",
+        lightSunset: "#8B4513",
         dark: "#0f0e17",
         second: "#fffffe",
         description: "#a7a9be;",
