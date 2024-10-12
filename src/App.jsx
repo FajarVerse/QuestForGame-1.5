@@ -7,6 +7,7 @@ import AuthLayout from "./components/layouts/AuthLayout";
 import { useEffect, useRef, useState } from "react";
 import { getNewGameList } from "./services/newgamelist.service";
 import GameCards from "./components/fragments/GameCard";
+import Button from "./components/elements/Button";
 
 function App() {
   const [newGameList, setNewGameList] = useState([]);
@@ -164,7 +165,7 @@ function App() {
       </AuthLayout>
 
       <AuthLayout background="bg-dark">
-        <div className="w-full px-5 flex flex-wrap">
+        <div className="w-full px-5 flex flex-wrap lg:px-10">
           <div className="w-full">
             <Header className="font-bebas-neue text-white text-4xl">
               Jelajahi Rilisan{" "}
@@ -201,13 +202,11 @@ function App() {
                 </GameCards>
               </a>
             </div>
-            <div className="w-full px-1 flex justify-between">
-              <button
-                className="px-2 py-1 bg-sunset font-comic-neue font-bold text-base text-second border-2 border-lightSunset btn-shadow flex items-center"
-                onClick={() => onScrollLeft()}
-              >
+            <div className="w-full px-1 flex justify-between lg:px-3">
+              <Button onClick={() => onScrollLeft()}>
                 <span>
                   <svg
+                    className="lg:w-8 lg:h-8"
                     xmlns="http://www.w3.org/2000/svg"
                     height="25px"
                     viewBox="0 -960 960 960"
@@ -217,15 +216,13 @@ function App() {
                     <path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z" />
                   </svg>
                 </span>
-                Previous
-              </button>
-              <button
-                className="px-5 py-1 bg-sunset font-comic-neue font-bold text-base text-second border-2 border-lightSunset btn-shadow flex items-center"
-                onClick={() => onScrollRight()}
-              >
+                Previos
+              </Button>
+              <Button onClick={() => onScrollRight()}>
                 Next
                 <span>
                   <svg
+                    className="lg:w-8 lg:h-8"
                     xmlns="http://www.w3.org/2000/svg"
                     height="25px"
                     viewBox="0 -960 960 960"
@@ -235,7 +232,7 @@ function App() {
                     <path d="M401.67-480.67 208.67-674l46.66-46.67 240 240-240 240-46.66-46.66 193-193.34Zm256.66 0L465.33-674 512-720.67l240 240-240 240-46.67-46.66 193-193.34Z" />
                   </svg>
                 </span>
-              </button>
+              </Button>
             </div>
           </div>
         </div>

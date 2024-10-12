@@ -2,7 +2,7 @@ const GameCards = (props) => {
   const { children, gameId } = props;
 
   return (
-    <div className="relative w-40 h-56 flex justify-center flex-shrink-0 bg-sunset overflow-hidden border-[3px] border-lightSunset drop-shadow-xl box-shadow">
+    <div className="relative w-40 h-52 flex justify-center flex-shrink-0 bg-sunset overflow-hidden border-[3px] border-lightSunset drop-shadow-xl box-shadow md:h-56 lg:w-44 lg:h-64">
       {children}
     </div>
   );
