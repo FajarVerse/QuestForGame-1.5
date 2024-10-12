@@ -4,8 +4,34 @@ import Description from "./components/elements/Description";
 import Header from "./components/elements/Header";
 import Navbar from "./components/layouts/Navbar";
 import AuthLayout from "./components/layouts/AuthLayout";
+import { useEffect, useRef, useState } from "react";
+import { getNewGameList } from "./services/newgamelist.service";
+import GameCards from "./components/fragments/GameCard";
 
 function App() {
+  const [newGameList, setNewGameList] = useState([]);
+  const newGame = newGameList.slice(1, 11);
+
+  useEffect(() => {
+    getNewGameList((data) => {
+      setNewGameList(data.results);
+    });
+  }, []);
+
+  const cardContentRef = useRef(null);
+
+  const onScrollLeft = () => {
+    if (cardContentRef.current) {
+      cardContentRef.current.scrollBy(-350, 0);
+    }
+  };
+
+  const onScrollRight = () => {
+    if (cardContentRef.current) {
+      cardContentRef.current.scrollBy(350, 0);
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -149,29 +175,67 @@ function App() {
             <div className="w-full">
               <img src={""} alt="" />
             </div>
-            <div className="w-full px-5 py-5 flex overflow-hidden gap-3">
-              <div className="relative w-44 h-[15.5rem] bg-white rounded-lg overflow-hidden border-[3px] border-lightSunset drop-shadow-xl box-shadow">
-                <div className="w-full h-full">
-                  <img
-                    src={heroBg}
-                    alt=""
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="absolute bottom-0 w-full h-1/3 px-4 py-1 bg-sunset rounded-t-2xl border-t-[3px] border-lightSunset">
-                  <h3 className="font-bebas-neue font-bold text-2xl text-dark tracking-wide mb-2">
-                    Game
-                  </h3>
-                  <div className="w-full flex justify-between">
-                    <p className="font-comic-neue font-extrabold text-base text-slate-800">
-                      2022
-                    </p>
-                    <p className="font-comic-neue font-extrabold text-base text-slate-800">
-                      ⭐ 4.5
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <div
+              className="w-full py-5 flex overflow-hidden gap-5 mb-2 scroll-smooth"
+              ref={cardContentRef}
+            >
+              {newGame.length > 0 &&
+                newGame.map((game) => (
+                  <GameCards key={game.id}>
+                    <GameCards.CardImage
+                      image={game.background_image}
+                      titleImage={game.name}
+                    />
+                    <GameCards.CardFill
+                      title={game.name}
+                      date={game.released}
+                      rating={game.rating}
+                    />
+                  </GameCards>
+                ))}
+              <a href="#">
+                <GameCards>
+                  <h5 className="font-bebas-neue text-xl tracking-wider self-center">
+                    More Game..
+                  </h5>
+                </GameCards>
+              </a>
+            </div>
+            <div className="w-full px-1 flex justify-between">
+              <button
+                className="px-2 py-1 bg-sunset font-comic-neue font-bold text-base text-second border-2 border-lightSunset btn-shadow flex items-center"
+                onClick={() => onScrollLeft()}
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="25px"
+                    viewBox="0 -960 960 960"
+                    width="25px"
+                    fill="#ffffff"
+                  >
+                    <path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z" />
+                  </svg>
+                </span>
+                Previous
+              </button>
+              <button
+                className="px-5 py-1 bg-sunset font-comic-neue font-bold text-base text-second border-2 border-lightSunset btn-shadow flex items-center"
+                onClick={() => onScrollRight()}
+              >
+                Next
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="25px"
+                    viewBox="0 -960 960 960"
+                    width="25px"
+                    fill="#ffffff"
+                  >
+                    <path d="M401.67-480.67 208.67-674l46.66-46.67 240 240-240 240-46.66-46.66 193-193.34Zm256.66 0L465.33-674 512-720.67l240 240-240 240-46.67-46.66 193-193.34Z" />
+                  </svg>
+                </span>
+              </button>
             </div>
           </div>
         </div>
