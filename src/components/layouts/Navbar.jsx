@@ -24,7 +24,7 @@ const Navbar = () => {
   };
 
   return (
-    <header ref={HeaderFixedRef} className="absolute top-0 w-full h3 z-50">
+    <header ref={HeaderFixedRef} className="absolute top-0 w-full h3 z-[99]">
       <div
         className="w-full bg-transparent mx-auto px-5 py-4 transition duration-500 ease-in-out rounded-[0] lg:px-10"
         ref={HeaderRef}
