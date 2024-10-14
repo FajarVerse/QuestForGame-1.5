@@ -1,5 +1,5 @@
 const Button = (props) => {
-  const { children, className, onClick,link } = props;
+  const { children, className, onClick, link } = props;
   return (
     <a href={link}>
       <button
