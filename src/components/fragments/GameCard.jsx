@@ -26,15 +26,15 @@ const CardFill = (props) => {
   const { title, date, rating } = props;
 
   return (
-    <div className="absolute bottom-0 w-full h-1/3 px-4 py-1 bg-sunset rounded-t-2xl border-t-[3px] border-lightSunset">
-      <h3 className="font-bebas-neue font-bold text-base text-dark tracking-wide mb-2">
+    <div className="absolute bottom-0 w-full h-1/3 px-4 py-1 bg-sunset rounded-t-2xl ring-2 ring-lightSunset lg:py-2">
+      <h3 className="font-bebas-neue font-bold text-base text-second tracking-wide mb-2 lg:text-lg lg:tracking-wider">
         {(title || "").substring(0, 15)}...
       </h3>
       <div className="w-full flex justify-between">
-        <p className="font-comic-neue font-extrabold text-base text-slate-800">
+        <p className="font-comic-neue font-extrabold text-sm text-second lg:text-base">
           {(date || "").substring(0, 4)}
         </p>
-        <p className="font-comic-neue font-extrabold text-base text-slate-800">
+        <p className="font-comic-neue font-extrabold text-sm text-second lg:text-base">
           ⭐ {rating}
         </p>
       </div>
