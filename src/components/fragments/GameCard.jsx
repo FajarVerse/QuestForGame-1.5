@@ -2,7 +2,7 @@ const GameCards = (props) => {
   const { children, gameId } = props;
 
   return (
-    <div className="relative w-40 h-52 flex justify-center flex-shrink-0 bg-sunset overflow-hidden border-[3px] border-lightSunset drop-shadow-xl box-shadow md:h-56 lg:w-44 lg:h-64">
+    <div className="relative w-36 h-44 flex justify-center flex-shrink-0 bg-sunset overflow-hidden border-[3px] border-lightSunset drop-shadow-xl box-shadow md:h-48 lg:w-44 lg:h-60">
       {children}
     </div>
   );
@@ -27,7 +27,7 @@ const CardFill = (props) => {
 
   return (
     <div className="absolute bottom-0 w-full h-1/3 px-4 py-1 bg-sunset rounded-t-2xl border-t-[3px] border-lightSunset">
-      <h3 className="font-bebas-neue font-bold text-lg text-dark tracking-wide mb-2">
+      <h3 className="font-bebas-neue font-bold text-base text-dark tracking-wide mb-2">
         {(title || "").substring(0, 15)}...
       </h3>
       <div className="w-full flex justify-between">

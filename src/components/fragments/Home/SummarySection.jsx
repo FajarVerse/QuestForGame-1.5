@@ -8,6 +8,7 @@ import Button from "../../elements/Button";
 import valo1 from "../../../assets/Image/valo_character/valo_char_1.png";
 import valo2 from "../../../assets/Image/valo_character/valo_char_2.png";
 import valo3 from "../../../assets/Image/valo_character/valo_char_5.png";
+import { Link } from "react-router-dom";
 
 const SummarySection = () => {
   const [newGameList, setNewGameList] = useState([]);
@@ -84,13 +85,13 @@ const SummarySection = () => {
                       />
                     </GameCards>
                   ))}
-                <a href="#">
+                <Link to={"/games"}>
                   <GameCards>
                     <h5 className="font-bebas-neue text-xl tracking-wider self-center">
                       More Game..
                     </h5>
                   </GameCards>
-                </a>
+                </Link>
               </div>
               <div className="w-full px-1 flex justify-between lg:px-3">
                 <Button onClick={() => onScrollLeft()}>

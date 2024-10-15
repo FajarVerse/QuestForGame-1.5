@@ -7,7 +7,8 @@
 }
 
 .header-transition {
-  @apply z-[999] w-[96%] px-5 py-2 rounded-full translate-y-5 bg-dark shadow-sm shadow-primary md:w-[90%] lg:w-4/5;
+  @apply z-[999] w-[90%] px-5 py-2 translate-y-5 bg-dark border-2 border-lightSunset md:w-[90%] lg:w-[85%] lg:border-[3px];
+  box-shadow: 3.5px 3.5px 0 0.5px #ff8906;
 }
 
 .hamburger-line {
@@ -26,6 +27,10 @@
   @apply -rotate-45;
 }
 
+.nav-link {
+  @apply font-comic-neue font-semibold text-base text-second py-2 mx-8 flex lg:text-xl hover:text-dark transition duration-300 ease-in-out lg:hover:text-primary;
+}
+
 .backdrop-bg {
   @apply after:content-[''] after:absolute after:top-0 after:left-0 after:bottom-0 after:right-0 after:bg-dark after:opacity-85 after:z-10;
 }
@@ -38,6 +43,6 @@
   box-shadow: 5px 5px 0px 0.5px #ff8906;
 }
 
-.btn-shadow{
-    box-shadow: 3px 3px 0px 0.5px #ff8906;
+.btn-shadow {
+  box-shadow: 3px 3px 0px 0.5px #ff8906;
 }

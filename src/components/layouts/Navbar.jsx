@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const HamburgerToggleRef = useRef(null);
@@ -44,7 +45,7 @@ const Navbar = () => {
                 id="hamburger"
                 name="hamburger"
                 ref={HamburgerToggleRef}
-                className="block absolute right-4"
+                className="block absolute right-2.5"
                 onClick={() => toggleClick()}
               >
                 <span className="hamburger-line origin-top-left"></span>
@@ -54,40 +55,40 @@ const Navbar = () => {
             </div>
             <nav
               ref={Navbar}
-              className="hidden absolute bg-white shadow-lg rounded-md max-w-[250px] right-4 top-11 lg:block lg:static lg:top-0 lg:max-w-max lg:bg-transparent lg:shadow-none"
+              className="hidden absolute bg-sunset border-[2.5px] border-lightSunset box-shadow max-w-[250px] right-4 top-9 lg:block lg:static lg:top-0 lg:max-w-max lg:bg-transparent lg:shadow-none lg:border-none"
             >
               <ul className="block lg:flex">
                 <li className="group">
-                  <a
-                    href="#"
-                    className="font-comic-neue font-semibold text-base text-dark py-2 mx-8 flex lg:text-xl lg:text-white"
+                  <Link
+                    to={"/home"}
+                    className="nav-link"
                   >
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="group">
-                  <a
-                    href="#"
-                    className="font-comic-neue font-semibold text-base text-dark py-2 mx-8 flex lg:text-xl lg:text-white"
+                  <Link
+                    to={"/games"}
+                    className="nav-link"
                   >
                     Games
-                  </a>
+                  </Link>
                 </li>
                 <li className="group">
-                  <a
-                    href="#"
-                    className="font-comic-neue font-semibold text-base text-dark py-2 mx-8 flex lg:text-xl lg:text-white"
+                  <Link
+                    to={"/movies"}
+                    className="nav-link"
                   >
                     Movies
-                  </a>
+                  </Link>
                 </li>
                 <li className="group">
-                  <a
-                    href="#"
-                    className="font-comic-neue font-semibold text-base text-dark py-2 mx-8 flex lg:text-xl lg:text-white"
+                  <Link
+                    to={"/news"}
+                    className="nav-link"
                   >
                     News
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </nav>

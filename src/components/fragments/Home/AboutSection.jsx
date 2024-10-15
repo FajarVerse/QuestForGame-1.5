@@ -3,6 +3,7 @@ import AuthLayout from "../../layouts/AuthLayout";
 import Header from "../../elements/Header";
 import Description from "../../elements/Description";
 import aboutImg from "../../../assets/Image/about_image.png";
+import { Link } from "react-router-dom";
 const AboutSection = () => {
   return (
     <Fragment>
@@ -26,12 +27,12 @@ const AboutSection = () => {
             <Description>
               Kami mengambil semua data game yang ada melalui API yang
               disediakan oleh{" "}
-              <a
-                href="https://rawg.io/apidocs"
+              <Link
+                to={"/https://rawg.io/apidocs"}
                 className="font-semibold italic cursor-pointer"
               >
                 RAWG
-              </a>
+              </Link>
               , sehingga dapat terjamin keamanannya.
             </Description>
             <Description>

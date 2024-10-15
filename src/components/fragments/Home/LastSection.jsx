@@ -18,7 +18,7 @@ const LastSection = () => {
               Siap untuk tantangan? Ayo mulai petualanganmu dan temukan game
               terbaikmu sekarang!
             </Description>
-            <Button className="mx-auto text-lg px-5 xl:text-xl xl:py-1.5">
+            <Button className="mx-auto text-lg px-5 xl:text-xl xl:py-1.5" link={"/games"}>
               Let's Start Your Adventure{" "}
               <span>
                 <svg
