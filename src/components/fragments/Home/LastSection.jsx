@@ -10,7 +10,7 @@ const LastSection = () => {
     <Fragment>
       <AuthLayout
         backgroundImage={LastBgHome}
-        className="relative backdrop-bg md:bg-top"
+        className="relative pb-16 backdrop-bg md:bg-top last-linear"
       >
         <div className="relative z-20">
           <div className="w-full px-5 py-5 md:px-10 lg:px-32">

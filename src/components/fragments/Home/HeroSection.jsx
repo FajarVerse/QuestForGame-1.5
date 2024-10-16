@@ -9,7 +9,7 @@ const HeroSection = () => {
   return (
     <Fragment>
       <AuthLayout
-        className="pt-40 relative pb-32 bg-dark min-h-screen bg-center bg-cover bg-no-repeat backdrop-bg"
+        className="pt-40 relative pb-32 bg-dark min-h-screen bg-center bg-cover bg-no-repeat backdrop-bg hero"
         backgroundImage={heroBg}
       >
         <div className="container max-w-full">
