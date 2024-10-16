@@ -27,7 +27,7 @@ const HeroSection = () => {
                 </Description>
               </div>
               <div className="flex justify-center">
-                <Button className="text-xl mt-5 gap-3 lg:text-2xl xl:text-3xl xl:px-5">
+                <Button className="text-xl mt-5 gap-3 lg:text-2xl xl:text-3xl xl:px-5" link={"/games"}>
                   Start
                   <span>
                     <svg

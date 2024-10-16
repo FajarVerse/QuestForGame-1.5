@@ -17,7 +17,7 @@ const ToggleScrollX = (props) => {
 
   return (
     <>
-      <div className="w-full px-1 mt-3 flex justify-between lg:px-3">
+      <div className="w-full px-1 mt-3 flex justify-between">
         <Button onClick={() => onScrollLeft()}>
           <span>
             <svg
