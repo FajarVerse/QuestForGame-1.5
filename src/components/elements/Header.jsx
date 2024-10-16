@@ -3,7 +3,7 @@ const Header = (props) => {
 
   return (
     <h2
-      className={`${className} font-bold text-center tracking-wide mb-3 md:text-5xl lg:text-4xl xl:text-5xl`}
+      className={`${className} font-bold tracking-wide mb-3 md:text-5xl lg:text-4xl xl:text-5xl`}
     >
       {children}
     </h2>

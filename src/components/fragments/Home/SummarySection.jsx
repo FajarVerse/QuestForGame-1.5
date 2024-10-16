@@ -1,7 +1,7 @@
 import { Fragment, useEffect, useRef, useState } from "react";
 import AuthLayout from "../../layouts/AuthLayout";
 import Header from "../../elements/Header";
-import { getNewGameList } from "../../../services/newgamelist.service";
+// import { getNewGameList } from "../../../services/newgamelist.service";
 import Description from "../../elements/Description";
 import GameCards from "../GameCard";
 import Button from "../../elements/Button";
@@ -10,16 +10,17 @@ import valo2 from "../../../assets/Image/valo_character/valo_char_2.png";
 import valo3 from "../../../assets/Image/valo_character/valo_char_5.png";
 import { Link } from "react-router-dom";
 import ToggleScrollX from "../ToggleScrollX";
+import CardLayout from "../../layouts/CardLayout";
 
 const SummarySection = () => {
-  const [newGameList, setNewGameList] = useState([]);
-  const newGame = newGameList.slice(1, 11);
+  // const [newGameList, setNewGameList] = useState([]);
+  // const newGame = newGameList.slice(1, 11);
 
-  useEffect(() => {
-    getNewGameList((data) => {
-      setNewGameList(data.results);
-    });
-  }, []);
+  // useEffect(() => {
+  //   getNewGameList((data) => {
+  //     setNewGameList(data.results);
+  //   });
+  // }, []);
 
   const cardContentRef = useRef(null);
 
@@ -28,7 +29,7 @@ const SummarySection = () => {
       <AuthLayout background="bg-dark">
         <div className="w-full mx-auto px-5 flex flex-wrap md:px-10 xl:px-14">
           <div className="w-full">
-            <Header className="font-bebas-neue text-white text-4xl">
+            <Header className="font-bebas-neue text-4xl text-white text-center ">
               Jelajahi Rilisan{" "}
               <span className="text-primary">Game Terupdate</span>
             </Header>
@@ -56,10 +57,7 @@ const SummarySection = () => {
                 Temukan game-game terupdate yang sedang hype di dunia gaming!
                 Lengkap dengan rating dan tanggal rilisnya.
               </Description>
-              <div
-                className="relative w-full py-3.5 flex overflow-x-scroll gap-5 mb-2 scroll-smooth card-scroll-bar"
-                ref={cardContentRef}
-              >
+              {/* <CardLayout cardContentRef={cardContentRef}>
                 {newGame.length > 0 &&
                   newGame.map((game) => (
                     <GameCards key={game.id}>
@@ -81,7 +79,7 @@ const SummarySection = () => {
                     </h5>
                   </GameCards>
                 </Link>
-              </div>
+              </CardLayout> */}
               <ToggleScrollX cardContent={cardContentRef} />
             </div>
           </div>

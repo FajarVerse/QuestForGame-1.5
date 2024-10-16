@@ -19,7 +19,7 @@ const HeroSection = () => {
                 <Header className="font-comic-neue font-bold text-2xl text-primary xl:text-6xl">
                   Welcome To
                 </Header>
-                <Header className="font-bebas-neue text-6xl text-second tracking-wider  md:text-8xl lg:text-9xl xl:text-[10rem]">
+                <Header className="font-bebas-neue text-6xl text-second text-center tracking-wider  md:text-8xl lg:text-9xl xl:text-[10rem]">
                   Quest<span className="text-primary">ForGame</span>
                 </Header>
                 <Description className="font-comic-neue -mb-2 font-semibold md:text-lg xl:text-xl">
