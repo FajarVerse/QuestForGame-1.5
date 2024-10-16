@@ -8,7 +8,7 @@ const AboutSection = () => {
   return (
     <Fragment>
       <AuthLayout background="bg-dark">
-        <div className="w-full mx-auto flex flex-wrap  lg:items-center xl:px-10">
+        <div className="w-full mx-auto flex flex-wrap lg:items-center xl:px-10">
           <div className="w-full mx-auto px-5 md:px-10 lg:w-1/2 xl:w-[60%] xl:pr-10">
             <Header className="font-bebas-neue text-4xl text-second text-center lg:text-left">
               Apa itu Quest<span className="text-primary">ForGame</span> ??

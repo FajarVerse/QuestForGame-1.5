@@ -12,7 +12,7 @@ const Games = () => {
     <>
       <Navbar />
       <AuthLayout background={"bg-dark"}>
-        <div className="w-full px-5 py-5 lg:px-14">
+        <div className="w-full px-5 py-5 lg:px-10 xl:px-14">
           <div className="w-full mb-10">
             <Header className="font-bebas-neue text-5xl text-white text-center tracking-wider lg:text-7xl xl:text-9xl">
               Games
