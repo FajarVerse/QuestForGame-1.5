@@ -20,7 +20,7 @@ const Navbar = () => {
       HeaderFixedRef.current.classList.add("header-fixed");
     } else {
       HeaderRef.current.classList.remove("header-transition");
-      HeaderFixedRef.current.classLista.remove("header-fixed");
+      HeaderFixedRef.current.classList.remove("header-fixed");
     }
   };
 

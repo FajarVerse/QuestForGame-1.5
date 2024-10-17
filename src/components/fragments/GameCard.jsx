@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
 const GameCards = (props) => {
-  const { children, gameId } = props;
+  const { children, gameId, link } = props;
 
   return (
     <>
-      <Link to={"/games"}>
+      <Link to={`/${link}`}>
         <div className="relative w-36 h-44 flex justify-center flex-shrink-0 bg-sunset overflow-hidden border-[3px] border-lightSunset drop-shadow-xl box-shadow md:h-48 lg:w-44 lg:h-60">
           {children}
         </div>

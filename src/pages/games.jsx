@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Button from "../components/elements/Button";
 import Description from "../components/elements/Description";
 import Header from "../components/elements/Header";
@@ -6,8 +7,33 @@ import ToggleScrollX from "../components/fragments/ToggleScrollX";
 import AuthLayout from "../components/layouts/AuthLayout";
 import CardLayout from "../components/layouts/CardLayout";
 import Navbar from "../components/layouts/Navbar";
+import { NewGame } from "../hooks/newGame";
+// import { getNewGameList } from "../services/newgamelist.service";
 
 const Games = () => {
+  const dataNewGame = NewGame();
+
+  console.log(dataNewGame)
+
+  // const [newGameList, setNewGameList] = useState([]);
+
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     const data = localStorage.getItem("dataGame");
+  //     if (data) {
+  //       const dataGames = JSON.parse(data);
+  //       if (dataGames.timeStamp && Date.now() - dataGames.timeStamp < 3600000) {
+  //         setNewGameList(dataGames.data.results);
+  //         return;
+  //       }
+  //     } else {
+  //       const newGames = await getNewGameList();
+  //       setNewGameList(newGames.results);
+  //     }
+  //   };
+  //   getData();
+  // }, []);
+
   return (
     <>
       <Navbar />
@@ -27,9 +53,20 @@ const Games = () => {
             </Header>
             <hr />
             <CardLayout>
-              <GameCards>
-                <GameCards.CardFill></GameCards.CardFill>
-              </GameCards>
+              {dataNewGame.game.length > 0 &&
+                dataNewGame.game.map((game) => (
+                  <GameCards key={game.id}>
+                    <GameCards.CardImage
+                      image={game.background_image}
+                      titleImage={game.name}
+                    />
+                    <GameCards.CardFill
+                      title={game.name}
+                      date={game.released}
+                      rating={game.rating}
+                    />
+                  </GameCards>
+                ))}
             </CardLayout>
             <ToggleScrollX />
           </div>
@@ -67,12 +104,22 @@ const Games = () => {
             <hr />
             <div className="w-full py-2 flex gap-3 overflow-x-scroll card-scroll-bar lg:gap-5">
               <Button className="px-5 lg:py-1.5 lg:px-7 lg:text-xl">All</Button>
-              <Button className="px-5 lg:py-1.5 lg:px-7 lg:text-xl">Action</Button>
-              <Button className="px-5 lg:py-1.5 lg:px-7 lg:text-xl">Adventure</Button>
+              <Button className="px-5 lg:py-1.5 lg:px-7 lg:text-xl">
+                Action
+              </Button>
+              <Button className="px-5 lg:py-1.5 lg:px-7 lg:text-xl">
+                Adventure
+              </Button>
               <Button className="px-5 lg:py-1.5 lg:px-7 lg:text-xl">RPG</Button>
-              <Button className="px-5 lg:py-1.5 lg:px-7 lg:text-xl">Shooter</Button>
-              <Button className="px-5 lg:py-1.5 lg:px-7 lg:text-xl">Sports</Button>
-              <Button className="px-5 lg:py-1.5 lg:px-7 lg:text-xl">Racing</Button>
+              <Button className="px-5 lg:py-1.5 lg:px-7 lg:text-xl">
+                Shooter
+              </Button>
+              <Button className="px-5 lg:py-1.5 lg:px-7 lg:text-xl">
+                Sports
+              </Button>
+              <Button className="px-5 lg:py-1.5 lg:px-7 lg:text-xl">
+                Racing
+              </Button>
             </div>
             <CardLayout>
               <GameCards>

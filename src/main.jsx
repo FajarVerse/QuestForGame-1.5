@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Home from "./pages/home.jsx";
 import Games from "./pages/games.jsx";
+import { NewGameProvider } from "./context/NewGameContext.jsx";
 
 const router = createBrowserRouter(
   [
@@ -33,6 +34,8 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <NewGameProvider>
+      <RouterProvider router={router} />
+    </NewGameProvider>
   </StrictMode>
 );

@@ -11,17 +11,11 @@ import valo3 from "../../../assets/Image/valo_character/valo_char_5.png";
 import { Link } from "react-router-dom";
 import ToggleScrollX from "../ToggleScrollX";
 import CardLayout from "../../layouts/CardLayout";
+import { NewGame } from "../../../hooks/newGame";
 
 const SummarySection = () => {
-  // const [newGameList, setNewGameList] = useState([]);
-  // const newGame = newGameList.slice(1, 11);
-
-  // useEffect(() => {
-  //   getNewGameList((data) => {
-  //     setNewGameList(data.results);
-  //   });
-  // }, []);
-
+  const dataNewGame = NewGame();
+  const dataGame = dataNewGame.game.slice(0,10)
   const cardContentRef = useRef(null);
 
   return (
@@ -57,9 +51,9 @@ const SummarySection = () => {
                 Temukan game-game terupdate yang sedang hype di dunia gaming!
                 Lengkap dengan rating dan tanggal rilisnya.
               </Description>
-              {/* <CardLayout cardContentRef={cardContentRef}>
-                {newGame.length > 0 &&
-                  newGame.map((game) => (
+              <CardLayout cardContentRef={cardContentRef}>
+                {dataGame.length > 0 &&
+                  dataGame.map((game) => (
                     <GameCards key={game.id}>
                       <GameCards.CardImage
                         image={game.background_image}
@@ -72,14 +66,12 @@ const SummarySection = () => {
                       />
                     </GameCards>
                   ))}
-                <Link to={"/games"}>
-                  <GameCards>
+                  <GameCards link={"games"}>
                     <h5 className="font-bebas-neue text-xl text-second tracking-wider self-center">
                       More Game..
                     </h5>
                   </GameCards>
-                </Link>
-              </CardLayout> */}
+              </CardLayout>
               <ToggleScrollX cardContent={cardContentRef} />
             </div>
           </div>
