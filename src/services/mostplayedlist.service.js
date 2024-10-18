@@ -1,5 +1,3 @@
-// https://api.rawg.io/api/games?key=69dce11161584a0ab6592137c5091871
-
 import axios from "axios";
 
 export const getMostPlayedGames = async () => {
