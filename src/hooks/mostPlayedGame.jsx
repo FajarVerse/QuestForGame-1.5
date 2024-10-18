@@ -19,7 +19,7 @@ export const MostPlayedGame = () => {
         }
       } else {
         const dataMostPlayed = await getMostPlayedGames();
-        setMostPlayed(dataMostPlayed.data.results);
+        setMostPlayed(dataMostPlayed.results);
         return;
       }
     };

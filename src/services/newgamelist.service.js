@@ -7,7 +7,6 @@ export const getNewGameList = async () => {
     );
 
     const data = response.data;
-
     const timeStamp = Date.now();
     localStorage.setItem("dataGame", JSON.stringify({ data, timeStamp }));
     return data;

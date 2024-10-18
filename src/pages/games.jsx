@@ -9,11 +9,15 @@ import CardLayout from "../components/layouts/CardLayout";
 import Navbar from "../components/layouts/Navbar";
 import { NewGame } from "../hooks/newGame";
 import { MostPlayedGame } from "../hooks/mostPlayedGame";
+import { RatingGame } from "../hooks/ratingGame";
 // import { getNewGameList } from "../services/newgamelist.service";
 
 const Games = () => {
   const dataNewGame = NewGame();
   const dataMostPlayed = MostPlayedGame();
+  const dataByRating = RatingGame();
+
+  console.log();
 
   // const [newGameList, setNewGameList] = useState([]);
 
@@ -101,9 +105,20 @@ const Games = () => {
             </Header>
             <hr />
             <CardLayout>
-              <GameCards>
-                <GameCards.CardFill></GameCards.CardFill>
-              </GameCards>
+              {dataByRating.length > 0 &&
+                dataByRating.map((game) => (
+                  <GameCards key={game.id}>
+                    <GameCards.CardImage
+                      image={game.background_image}
+                      titleImage={game.name}
+                    />
+                    <GameCards.CardFill
+                      title={game.name}
+                      date={game.released}
+                      rating={game.rating}
+                    />
+                  </GameCards>
+                ))}
             </CardLayout>
             <ToggleScrollX />
           </div>
