@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { json } from "react-router-dom";
 import { getRatingGameList } from "../services/ratinggamelist.service";
 
 export const RatingGame = () => {
@@ -11,12 +10,13 @@ export const RatingGame = () => {
 
       if (data) {
         const dataByRating = JSON.parse(data);
-
         if (
-          dataByRating.timeStamp &&
-          Date.now() - dataByRating.timeStamp < 3600000
+          !dataByRating.timeStamp ||
+          Date.now() - dataByRating.timeStamp > 3600000
         ) {
-          setByRating(dataByRating.data.results);
+          localStorage.removeItem("dataByRating");
+        } else {
+          setByRating(dataByRating.data);
           return;
         }
       } else {

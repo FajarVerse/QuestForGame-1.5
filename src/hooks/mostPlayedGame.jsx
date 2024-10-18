@@ -11,15 +11,17 @@ export const MostPlayedGame = () => {
       if (data) {
         const dataMostPlayed = JSON.parse(data);
         if (
-          dataMostPlayed.timeStamp &&
-          Date.now() - dataMostPlayed.timeStamp < 3600000
+          !dataMostPlayed.timeStamp &&
+          Date.now - dataMostPlayed.timeStamp > 3600000
         ) {
-          setMostPlayed(dataMostPlayed.data.results);
+          localStorage.removeItem("dataMostPlayed");
+        } else {
+          setMostPlayed(dataMostPlayed.data);
           return;
         }
       } else {
         const dataMostPlayed = await getMostPlayedGames();
-        setMostPlayed(dataMostPlayed.results);
+        setMostPlayed(dataMostPlayed);
         return;
       }
     };

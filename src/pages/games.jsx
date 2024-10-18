@@ -10,14 +10,16 @@ import Navbar from "../components/layouts/Navbar";
 import { NewGame } from "../hooks/newGame";
 import { MostPlayedGame } from "../hooks/mostPlayedGame";
 import { RatingGame } from "../hooks/ratingGame";
+import GenreOption from "../components/fragments/Games/GenreOption";
 // import { getNewGameList } from "../services/newgamelist.service";
 
 const Games = () => {
   const dataNewGame = NewGame();
   const dataMostPlayed = MostPlayedGame();
   const dataByRating = RatingGame();
+  const [genre, setGenre] = useState("");
 
-  console.log();
+  console.log(dataNewGame);
 
   // const [newGameList, setNewGameList] = useState([]);
 
@@ -57,8 +59,8 @@ const Games = () => {
             </Header>
             <hr />
             <CardLayout>
-              {dataNewGame.game.length > 0 &&
-                dataNewGame.game.map((game) => (
+              {dataNewGame.length> 0 &&
+                dataNewGame.map((game) => (
                   <GameCards key={game.id}>
                     <GameCards.CardImage
                       image={game.background_image}
@@ -128,7 +130,8 @@ const Games = () => {
               By <span className="text-primary">Genre</span>
             </Header>
             <hr />
-            <div className="w-full py-2 flex gap-3 overflow-x-scroll card-scroll-bar lg:gap-5">
+            <GenreOption genreGames={setGenre} />
+            {/* <div className="w-full py-2 flex gap-3 overflow-x-scroll card-scroll-bar lg:gap-5">
               <Button className="px-5 lg:py-1.5 lg:px-7 lg:text-xl">All</Button>
               <Button className="px-5 lg:py-1.5 lg:px-7 lg:text-xl">
                 Action
@@ -146,7 +149,7 @@ const Games = () => {
               <Button className="px-5 lg:py-1.5 lg:px-7 lg:text-xl">
                 Racing
               </Button>
-            </div>
+            </div> */}
             <CardLayout>
               <GameCards>
                 <GameCards.CardFill></GameCards.CardFill>

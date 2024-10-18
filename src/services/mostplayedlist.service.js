@@ -7,7 +7,7 @@ export const getMostPlayedGames = async () => {
     const response = await axios.get(
       "https://api.rawg.io/api/games?ordering=-added&page_size=50&key=69dce11161584a0ab6592137c5091871"
     );
-    const data = response.data;
+    const data = response.data.results;
 
     const timeStamp = Date.now();
     localStorage.setItem("dataMostPlayed", JSON.stringify({ data, timeStamp }));
