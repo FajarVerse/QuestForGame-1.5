@@ -1,12 +1,18 @@
+// https://api.rawg.io/api/games?key=69dce11161584a0ab6592137c5091871
+
 import axios from "axios";
 
-export const getMostPlayedGames = () => {
-  axios
-    .get(``)
-    .then((response) => {
-      console.log(response);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+export const getMostPlayedGames = async () => {
+  try {
+    const response = await axios.get(
+      "https://api.rawg.io/api/games?ordering=-added&page_size=50&key=69dce11161584a0ab6592137c5091871"
+    );
+    const data = response.data;
+
+    const timeStamp = Date.now();
+    localStorage.setItem("dataMostPlayed", JSON.stringify({ data, timeStamp }));
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 };
