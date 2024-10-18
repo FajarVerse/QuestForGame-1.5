@@ -10,7 +10,7 @@ const GenreGame = (genre) => {
 
       if (data) {
         const dataGenreGame = JSON.parse(data);
-        if (!data.expTime && Date.now() - dataGenreGame.expTime > 3600000) {
+        if (!data.expTime || Date.now() - dataGenreGame.expTime > 3600000) {
           localStorage.removeItem("dataByGenre");
         } else {
           setGenreGame(dataGenreGame.data);

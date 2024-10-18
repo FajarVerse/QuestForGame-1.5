@@ -11,7 +11,7 @@ export const MostPlayedGame = () => {
       if (data) {
         const dataMostPlayed = JSON.parse(data);
         if (
-          !dataMostPlayed.timeStamp &&
+          !dataMostPlayed.timeStamp ||
           Date.now - dataMostPlayed.timeStamp > 3600000
         ) {
           localStorage.removeItem("dataMostPlayed");
