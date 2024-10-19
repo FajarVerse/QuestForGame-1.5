@@ -4,6 +4,7 @@ import Header from "../../elements/Header";
 import Description from "../../elements/Description";
 import Button from "../../elements/Button";
 import heroBg from "../../../assets/Image/hero_image.jpg";
+import SubHeader from "../../elements/SubHeader";
 
 const HeroSection = () => {
   return (
@@ -16,18 +17,21 @@ const HeroSection = () => {
           <div className="relative z-20">
             <div className="w-full px-5 mx-auto">
               <div className="text-center">
-                <Header className="font-comic-neue font-bold text-2xl text-primary xl:text-6xl">
+                <SubHeader className="text-primary lg:mb-0">
                   Welcome To
-                </Header>
-                <Header className="font-bebas-neue text-6xl text-second text-center tracking-wider  md:text-8xl lg:text-9xl xl:text-[10rem]">
+                </SubHeader>
+                <Header className="text-white">
                   Quest<span className="text-primary">ForGame</span>
                 </Header>
-                <Description className="font-comic-neue -mb-2 font-semibold md:text-lg xl:text-xl">
+                <Description className="font-montserrat -mb-2 font-semibold md:text-lg xl:text-xl xl:mt-3">
                   Jelajahi dunia games, dan temukan game impian mu
                 </Description>
               </div>
               <div className="flex justify-center">
-                <Button className="text-xl mt-5 gap-3 lg:text-2xl xl:text-3xl xl:px-5" link={"/games"}>
+                <Button
+                  className="text-xl mt-5 gap-3 lg:text-2xl xl:text-3xl xl:px-5"
+                  link={"/games"}
+                >
                   Start
                   <span>
                     <svg

@@ -6,6 +6,7 @@ import CardLayout from "../../layouts/CardLayout";
 import GameCards from "../GameCard";
 import ToggleScrollX from "../ToggleScrollX";
 import GenreOption from "./GenreOption";
+import SubHeader from "../../elements/SubHeader";
 
 const GenreGamesCard = () => {
   const dataNewGame = NewGame();
@@ -16,9 +17,9 @@ const GenreGamesCard = () => {
   return (
     <>
       <div className="w-full mb-10">
-        <Header className="font-bebas-neue text-2xl text-white tracking-wider">
+        <SubHeader className="text-white">
           By <span className="text-primary">Genre</span>
-        </Header>
+        </SubHeader>
         <hr />
         <GenreOption genreGames={setGenre} />
         <CardLayout cardContentRef={cardContentRef}>

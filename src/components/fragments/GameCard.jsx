@@ -33,8 +33,8 @@ const CardFill = (props) => {
 
   return (
     <div className="absolute bottom-0 w-full h-1/3 px-4 py-1 bg-sunset rounded-t-2xl ring-2 ring-lightSunset lg:py-2">
-      <h3 className="font-bebas-neue font-bold text-base text-second tracking-wide mb-2 lg:text-lg lg:tracking-wider">
-        {(title || "").substring(0, 15)}...
+      <h3 className="font-montserrat font-bold text-sm text-second mb-2 lg:text-lg lg:tracking-wider">
+        {(title || "").substring(0, 10)}...
       </h3>
       <div className="w-full flex justify-between">
         <p className="font-comic-neue font-extrabold text-sm text-second lg:text-base">

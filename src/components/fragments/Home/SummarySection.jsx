@@ -10,6 +10,7 @@ import Description from "../../elements/Description";
 import CardLayout from "../../layouts/CardLayout";
 import GameCards from "../GameCard";
 import ToggleScrollX from "../ToggleScrollX";
+import SubHeader from "../../elements/SubHeader";
 
 const SummarySection = () => {
   const dataNewGame = NewGame();
@@ -21,10 +22,10 @@ const SummarySection = () => {
       <AuthLayout background="bg-dark">
         <div className="w-full mx-auto px-5 flex flex-wrap md:px-10 xl:px-14">
           <div className="w-full">
-            <Header className="font-bebas-neue text-4xl text-white text-center ">
+            <SubHeader className="text-white text-center ">
               Jelajahi Rilisan{" "}
               <span className="text-primary">Game Terupdate</span>
-            </Header>
+            </SubHeader>
           </div>
           <div className="w-full py-3 block lg:flex lg:items-center lg:gap-5">
             <div className="w-full py-3 mb-3 relative lg:w-[45%]">
@@ -65,7 +66,7 @@ const SummarySection = () => {
                     </GameCards>
                   ))}
                 <GameCards link={"games"}>
-                  <h5 className="font-bebas-neue text-xl text-second tracking-wider self-center">
+                  <h5 className="font-montserrat font-bold text-base text-second self-center">
                     More Game..
                   </h5>
                 </GameCards>

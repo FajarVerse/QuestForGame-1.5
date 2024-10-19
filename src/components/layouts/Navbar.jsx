@@ -35,7 +35,7 @@ const Navbar = () => {
             <div className="px-1">
               <a
                 href=""
-                className="block font-bebas-neue font-bold text-2xl text-second tracking-wide md:text-2xl lg:text-3xl"
+                className="block font-montserrat font-bold text-xl text-second md:text-2xl lg:text-3xl"
               >
                 Quest<span className="text-primary">ForGame</span>
               </a>

@@ -11,13 +11,14 @@ const Games = () => {
   return (
     <>
       <Navbar />
-      <AuthLayout background={"bg-dark"}>
+      <AuthLayout background={"bg-dark"} className={"pt-32"}>
         <div className="w-full px-5 py-5 lg:px-10 xl:px-14">
-          <div className="w-full mb-10">
-            <Header className="font-bebas-neue text-5xl text-white text-center tracking-wider lg:text-7xl xl:text-9xl">
-              Games
+          <div className="w-full mb-20 md:px-14">
+            <Header className="font-montserrat text-4xl text-white text-center md:text-4xl lg:text-6xl xl:text-7xl">
+              Level Up Your{" "}
+              <span className="text-primary">Gaming Experiences</span>
             </Header>
-            <Description className="text-center lg:text-xl">
+            <Description className="text-center  lg:text-xl xl:mt-7">
               Temukan game yang kamu cari disini!!
             </Description>
           </div>

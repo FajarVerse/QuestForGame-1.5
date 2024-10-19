@@ -4,6 +4,7 @@ import Header from "../../elements/Header";
 import CardLayout from "../../layouts/CardLayout";
 import GameCards from "../GameCard";
 import ToggleScrollX from "../ToggleScrollX";
+import SubHeader from "../../elements/SubHeader";
 
 const NewGamesCard = () => {
   const dataNewGame = NewGame();
@@ -12,9 +13,9 @@ const NewGamesCard = () => {
   return (
     <>
       <div className="w-full mb-10">
-        <Header className="font-bebas-neue text-2xl text-white tracking-wider">
+        <SubHeader className="text-white">
           New Games <span className="text-primary">Release</span>
-        </Header>
+        </SubHeader>
         <hr />
         <CardLayout cardContentRef={cardContentRef}>
           {dataNewGame.length > 0 &&

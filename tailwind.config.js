@@ -3,7 +3,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      "bebas-neue": ['"Bebas Neue"'],
+      montserrat: ['"Montserrat"'],
       "comic-neue": ['"Comic Neue"'],
     },
     extend: {
