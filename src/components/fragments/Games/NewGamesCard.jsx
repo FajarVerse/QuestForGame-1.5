@@ -1,10 +1,9 @@
 import { useRef } from "react";
 import { NewGame } from "../../../hooks/newGame";
-import Header from "../../elements/Header";
+import SubHeader from "../../elements/SubHeader";
 import CardLayout from "../../layouts/CardLayout";
 import GameCards from "../GameCard";
 import ToggleScrollX from "../ToggleScrollX";
-import SubHeader from "../../elements/SubHeader";
 
 const NewGamesCard = () => {
   const dataNewGame = NewGame();
