@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import GenreGame from "../../../hooks/GenreGame";
 import { NewGame } from "../../../hooks/newGame";
 import Header from "../../elements/Header";
@@ -11,6 +11,7 @@ const GenreGamesCard = () => {
   const dataNewGame = NewGame();
   const [genre, setGenre] = useState("");
   const genreGame = GenreGame(genre);
+  const cardContentRef = useRef(null)
 
   return (
     <>
@@ -20,7 +21,7 @@ const GenreGamesCard = () => {
         </Header>
         <hr />
         <GenreOption genreGames={setGenre} />
-        <CardLayout>
+        <CardLayout cardContentRef={cardContentRef}>
           {genre === ""
             ? dataNewGame.map((game) => (
                 <GameCards key={game.id}>
@@ -51,7 +52,7 @@ const GenreGamesCard = () => {
                 </GameCards>
               ))}
         </CardLayout>
-        <ToggleScrollX />
+        <ToggleScrollX cardContent={cardContentRef}/>
       </div>
     </>
   );

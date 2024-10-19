@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { MostPlayedGame } from "../../../hooks/mostPlayedGame";
 import Header from "../../elements/Header";
 import CardLayout from "../../layouts/CardLayout";
@@ -6,6 +7,7 @@ import ToggleScrollX from "../ToggleScrollX";
 
 const PlayedGamesCard = () => {
   const dataMostPlayed = MostPlayedGame();
+  const cardContentRef = useRef(null);
 
   return (
     <>
@@ -14,7 +16,7 @@ const PlayedGamesCard = () => {
           Most <span className="text-primary">Played</span>
         </Header>
         <hr />
-        <CardLayout>
+        <CardLayout cardContentRef={cardContentRef}>
           {dataMostPlayed.length > 0 &&
             dataMostPlayed.map((game) => (
               <GameCards key={game.id}>
@@ -30,7 +32,7 @@ const PlayedGamesCard = () => {
               </GameCards>
             ))}
         </CardLayout>
-        <ToggleScrollX />
+        <ToggleScrollX cardContent={cardContentRef} />
       </div>
     </>
   );

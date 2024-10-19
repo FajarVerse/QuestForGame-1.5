@@ -5,19 +5,19 @@ const ToggleScrollX = (props) => {
 
   const onScrollLeft = () => {
     if (cardContent) {
-      cardContent.current.scrollBy(-350, 0);
+      cardContent.current.scrollBy(-800, 0);
     }
   };
 
   const onScrollRight = () => {
     if (cardContent) {
-      cardContent.current.scrollBy(350, 0);
+      cardContent.current.scrollBy(800, 0);
     }
   };
 
   return (
     <>
-      <div className="w-full px-1 mt-3 flex justify-between">
+      <div className="w-full hidden px-1 mt-3 lg:flex lg:justify-between">
         <Button onClick={() => onScrollLeft()}>
           <span>
             <svg

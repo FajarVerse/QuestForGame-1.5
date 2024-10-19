@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { NewGame } from "../../../hooks/newGame";
 import Header from "../../elements/Header";
 import CardLayout from "../../layouts/CardLayout";
@@ -6,6 +7,7 @@ import ToggleScrollX from "../ToggleScrollX";
 
 const NewGamesCard = () => {
   const dataNewGame = NewGame();
+  const cardContentRef = useRef(null);
 
   return (
     <>
@@ -14,7 +16,7 @@ const NewGamesCard = () => {
           New Games <span className="text-primary">Release</span>
         </Header>
         <hr />
-        <CardLayout>
+        <CardLayout cardContentRef={cardContentRef}>
           {dataNewGame.length > 0 &&
             dataNewGame.map((game) => (
               <GameCards key={game.id}>
@@ -30,7 +32,7 @@ const NewGamesCard = () => {
               </GameCards>
             ))}
         </CardLayout>
-        <ToggleScrollX />
+        <ToggleScrollX cardContent={cardContentRef} />
       </div>
     </>
   );

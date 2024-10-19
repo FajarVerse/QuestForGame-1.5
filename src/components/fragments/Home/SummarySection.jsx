@@ -1,21 +1,19 @@
-import { Fragment, useEffect, useRef, useState } from "react";
-import AuthLayout from "../../layouts/AuthLayout";
+import { Fragment, useRef } from "react";
 import Header from "../../elements/Header";
+import AuthLayout from "../../layouts/AuthLayout";
 // import { getNewGameList } from "../../../services/newgamelist.service";
-import Description from "../../elements/Description";
-import GameCards from "../GameCard";
-import Button from "../../elements/Button";
 import valo1 from "../../../assets/Image/valo_character/valo_char_1.png";
 import valo2 from "../../../assets/Image/valo_character/valo_char_2.png";
 import valo3 from "../../../assets/Image/valo_character/valo_char_5.png";
-import { Link } from "react-router-dom";
-import ToggleScrollX from "../ToggleScrollX";
-import CardLayout from "../../layouts/CardLayout";
 import { NewGame } from "../../../hooks/newGame";
+import Description from "../../elements/Description";
+import CardLayout from "../../layouts/CardLayout";
+import GameCards from "../GameCard";
+import ToggleScrollX from "../ToggleScrollX";
 
 const SummarySection = () => {
   const dataNewGame = NewGame();
-  const dataGame = dataNewGame.game.slice(0,10)
+  const dataGame = dataNewGame.slice(0, 10);
   const cardContentRef = useRef(null);
 
   return (
@@ -66,11 +64,11 @@ const SummarySection = () => {
                       />
                     </GameCards>
                   ))}
-                  <GameCards link={"games"}>
-                    <h5 className="font-bebas-neue text-xl text-second tracking-wider self-center">
-                      More Game..
-                    </h5>
-                  </GameCards>
+                <GameCards link={"games"}>
+                  <h5 className="font-bebas-neue text-xl text-second tracking-wider self-center">
+                    More Game..
+                  </h5>
+                </GameCards>
               </CardLayout>
               <ToggleScrollX cardContent={cardContentRef} />
             </div>
