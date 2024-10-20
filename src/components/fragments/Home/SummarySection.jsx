@@ -1,16 +1,12 @@
 import { Fragment, useRef } from "react";
-import Header from "../../elements/Header";
-import AuthLayout from "../../layouts/AuthLayout";
-// import { getNewGameList } from "../../../services/newgamelist.service";
-import valo1 from "../../../assets/Image/valo_character/valo_char_1.png";
-import valo2 from "../../../assets/Image/valo_character/valo_char_2.png";
-import valo3 from "../../../assets/Image/valo_character/valo_char_5.png";
+import consoleImage from "../../../assets/Image/console_game.png";
 import { NewGame } from "../../../hooks/newGame";
 import Description from "../../elements/Description";
+import SubHeader from "../../elements/SubHeader";
+import AuthLayout from "../../layouts/AuthLayout";
 import CardLayout from "../../layouts/CardLayout";
 import GameCards from "../GameCard";
 import ToggleScrollX from "../ToggleScrollX";
-import SubHeader from "../../elements/SubHeader";
 
 const SummarySection = () => {
   const dataNewGame = NewGame();
@@ -27,22 +23,12 @@ const SummarySection = () => {
               <span className="text-primary">Game Terupdate</span>
             </SubHeader>
           </div>
-          <div className="w-full py-3 block lg:flex lg:items-center lg:gap-5">
-            <div className="w-full py-3 mb-3 relative lg:w-[45%]">
+          <div className="w-full py-3 block lg:flex lg:items-center lg:gap-5 xl:gap-10">
+            <div className="w-full py-3 relative">
               <img
-                src={valo3}
-                alt=""
-                className="w-1/2 relative mx-auto z-50 md:w-1/3 lg:w-3/5 xl:w-[45%]"
-              />
-              <img
-                src={valo2}
-                alt=""
-                className="w-1/2 absolute top-1/2 left-40 -translate-y-1/2 z-40 md:w-1/3 lg:w-3/5 lg:left-44 xl:left-64 xl:w-[45%]"
-              />
-              <img
-                src={valo1}
-                alt=""
-                className="w-1/2 absolute top-1/2 right-40 -translate-y-1/2 z-40 md:w-1/3 lg:w-3/5 lg:right-44 xl:right-60 xl:w-[45%]"
+                src={consoleImage}
+                alt="console_game"
+                className="w-4/5 mx-auto md:w-3/5 lg:w-5/6 xl:w-[90%]"
               />
             </div>
             <div className="w-full lg:w-[55%]">
