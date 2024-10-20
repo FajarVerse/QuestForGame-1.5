@@ -51,11 +51,6 @@ const SummarySection = () => {
                       />
                     </GameCards>
                   ))}
-                <GameCards link={"games"}>
-                  <h5 className="font-montserrat font-bold text-base text-second self-center">
-                    More Game..
-                  </h5>
-                </GameCards>
               </CardLayout>
               <ToggleScrollX cardContent={cardContentRef} />
             </div>

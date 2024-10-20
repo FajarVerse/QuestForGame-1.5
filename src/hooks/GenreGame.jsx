@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getGenreGameList } from "../services/genregamelist.service";
 
 const GenreGame = (genre) => {
-  const [genreGame, setGenreGame] = useState([]);
+  const [genreGame, setGenreGame] = useState({});
 
   useEffect(() => {
     const GetData = async () => {

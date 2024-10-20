@@ -5,12 +5,13 @@ import "./index.css";
 import Home from "./pages/home.jsx";
 import Games from "./pages/games.jsx";
 import { NewGameProvider } from "./context/NewGameContext.jsx";
+import DetailGames from "./pages/detailgames.jsx";
 
 const router = createBrowserRouter(
   [
     {
       path: "/",
-      element: <Home />,
+      element: <DetailGames />,
     },
     {
       path: "/home",
@@ -23,6 +24,10 @@ const router = createBrowserRouter(
     {
       path: "/movies",
       element: <h1>hello World</h1>,
+    },
+    {
+      path: "/detail-game/:id",
+      element: <DetailGames />,
     },
     {
       path: "/news",
