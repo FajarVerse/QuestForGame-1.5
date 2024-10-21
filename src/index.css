@@ -62,3 +62,7 @@
 .card-scroll-bar {
   @apply [&::-webkit-scrollbar]:h-1 [&::-webkit-scrollbar-track]:bg-transparent [&::-webkit-scrollbar-thumb]:bg-primary lg:[&::-webkit-scrollbar]:h-1.5;
 }
+
+.icon-detail {
+  @apply font-montserrat font-semibold text-sm text-second flex place-items-center justify-center flex-col gap-0.5 md:text-base xl:text-lg;
+}
