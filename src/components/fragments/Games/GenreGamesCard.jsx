@@ -11,7 +11,7 @@ const GenreGamesCard = () => {
   const dataNewGame = NewGame();
   const [genre, setGenre] = useState("");
   const genreGame = GenreGame(genre);
-  const cardContentRef = useRef(null)
+  const cardContentRef = useRef(null);
 
   return (
     <>
@@ -23,7 +23,9 @@ const GenreGamesCard = () => {
         <GenreOption genreGames={setGenre} />
         <CardLayout cardContentRef={cardContentRef}>
           {genre === ""
-            ? dataNewGame.map((game) => (
+            ? Array.isArray(dataNewGame) &&
+              dataNewGame.length > 0 &&
+              dataNewGame.map((game) => (
                 <GameCards key={game.id}>
                   <GameCards.CardImage
                     image={game.background_image}
@@ -52,7 +54,7 @@ const GenreGamesCard = () => {
                 </GameCards>
               ))}
         </CardLayout>
-        <ToggleScrollX cardContent={cardContentRef}/>
+        <ToggleScrollX cardContent={cardContentRef} />
       </div>
     </>
   );

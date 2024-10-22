@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { getDetailGame } from "../services/detailgame.service";
 
 const DetailGame = (idGame) => {
-  const [dataByGenre, setDataByGenre] = useState([]);
+  const [dataDetail, setDataDetail] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
@@ -10,20 +10,22 @@ const DetailGame = (idGame) => {
 
       if (data) {
         const dataDetailGame = JSON.parse(data);
-
-        if (!dataDetailGame && Date.now() - data.timeStamp > 3600000) {
+        if (
+          !dataDetailGame.timeStamp &&
+          Date.now() - dataDetailGame.timeStamp > 3600000
+        ) {
           localStorage.removeItem(`dataGameId-${idGame}`);
         } else {
-          setDataByGenre(dataDetailGame);
+          setDataDetail(dataDetailGame.data);
         }
       } else {
         const dataDetailGame = await getDetailGame(idGame);
-        setDataByGenre(dataDetailGame);
+        setDataDetail(dataDetailGame);
       }
     };
     getData();
   }, [idGame]);
-  return dataByGenre;
+  return dataDetail;
 };
 
 export default DetailGame;

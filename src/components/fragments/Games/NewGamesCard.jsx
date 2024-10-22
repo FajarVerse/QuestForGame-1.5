@@ -6,8 +6,8 @@ import GameCards from "../GameCard";
 import ToggleScrollX from "../ToggleScrollX";
 
 const NewGamesCard = () => {
-  const dataNewGame = NewGame();
   const cardContentRef = useRef(null);
+  const dataNewGame = NewGame();
 
   return (
     <>
@@ -17,7 +17,7 @@ const NewGamesCard = () => {
         </SubHeader>
         <hr />
         <CardLayout cardContentRef={cardContentRef}>
-          {dataNewGame.length > 0 &&
+          {dataNewGame.length >= 0 &&
             dataNewGame.map((game) => (
               <GameCards key={game.id} id={game.id}>
                 <GameCards.CardImage

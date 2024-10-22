@@ -14,7 +14,7 @@ export const getDetailGame = async (idGame) => {
       );
 
       const data = response.data;
-      const timeStamp = Date.now;
+      const timeStamp = Date.now();
       localStorage.setItem(
         `dataGameId-${idGame}`,
         JSON.stringify({ idGame, data, timeStamp })
