@@ -8,10 +8,14 @@ import ToggleScrollX from "../ToggleScrollX";
 import DescriptionDetail from "./DescriptionDetail";
 import MoreDetail from "./MoreDetail";
 import StoreDetail from "./StoreDetail";
+import ScreenshotGame from "../../../hooks/screenshotGame";
+import { useRef } from "react";
 
 const DetailGameFragment = () => {
   const { id } = useParams();
   const dataDetail = DetailGame(id);
+  const imageGame = ScreenshotGame(id);
+  const ImageContentRef = useRef(null);
 
   return (
     <>
@@ -31,8 +35,10 @@ const DetailGameFragment = () => {
           <ScreenShootDetail
             key={dataDetail.id}
             publisher={dataDetail.publishers}
+            image={imageGame.results}
+            imageContentRef={ImageContentRef}
           />
-          <ToggleScrollX />
+          <ToggleScrollX cardContent={ImageContentRef} />
         </div>
         <div className="w-full px-7 my-3 md:px-10 lg:px-14 lg:my-5 xl:px-20">
           <DescriptionDetail
