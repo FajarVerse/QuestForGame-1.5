@@ -20,7 +20,7 @@ const RatingGamesCard = () => {
         <CardLayout cardContentRef={cardContentRef}>
           {dataByRating.length > 0 &&
             dataByRating.map((game) => (
-              <GameCards key={game.id}>
+              <GameCards key={game.id} id={game.id}>
                 <GameCards.CardImage
                   image={game.background_image}
                   titleImage={game.name}

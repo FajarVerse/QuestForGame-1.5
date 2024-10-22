@@ -26,7 +26,7 @@ const GenreGamesCard = () => {
             ? Array.isArray(dataNewGame) &&
               dataNewGame.length > 0 &&
               dataNewGame.map((game) => (
-                <GameCards key={game.id}>
+                <GameCards key={game.id} id={game.id}>
                   <GameCards.CardImage
                     image={game.background_image}
                     titleImage={game.name}
@@ -41,7 +41,7 @@ const GenreGamesCard = () => {
             : Array.isArray(genreGame) &&
               genreGame.length > 0 &&
               genreGame.map((game) => (
-                <GameCards key={game.id}>
+                <GameCards key={game.id} id={game.id}>
                   <GameCards.CardImage
                     image={game.background_image}
                     titleImage={game.name}
