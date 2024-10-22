@@ -66,3 +66,7 @@
 .icon-detail {
   @apply font-montserrat font-semibold text-sm text-second flex place-items-center justify-center flex-col gap-0.5 md:text-base xl:text-lg;
 }
+
+.detail-icon-layout {
+  @apply w-full px-3 py-2 flex justify-around items-center bg-sunset box-shadow border-[3px] border-lightSunset mb-5 md:px-14 md:py-3 lg:w-1/2 lg:px-8;
+}
