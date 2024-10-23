@@ -70,3 +70,7 @@
 .detail-icon-layout {
   @apply w-full px-3 py-2 flex justify-around items-center bg-sunset box-shadow border-[3px] border-lightSunset mb-5 md:px-14 md:py-3 lg:w-1/2 lg:px-8;
 }
+
+.sosmed-icon {
+  @apply px-2 py-2 bg-second rounded-full text-dark hover:bg-primary hover:text-second hover:scale-110 transition duration-300 ease-in-out;
+}
