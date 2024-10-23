@@ -2,10 +2,11 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Home from "./pages/home.jsx";
-import Games from "./pages/games.jsx";
-import { NewGameProvider } from "./context/NewGameContext.jsx";
 import DetailGames from "./pages/detailgames.jsx";
+import Games from "./pages/games.jsx";
+import Home from "./pages/home.jsx";
+import Movies from "./pages/movies.jsx";
+import News from "./pages/news.jsx";
 
 const router = createBrowserRouter(
   [
@@ -23,15 +24,15 @@ const router = createBrowserRouter(
     },
     {
       path: "/movies",
-      element: <h1>hello World</h1>,
+      element: <Movies />,
+    },
+    {
+      path: "/news",
+      element: <News />,
     },
     {
       path: "/detail-game/:id",
       element: <DetailGames />,
-    },
-    {
-      path: "/news",
-      element: <h1>Hello World</h1>,
     },
   ],
   { basename: "/QuestForGame-1.5/" }
@@ -39,8 +40,6 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <NewGameProvider>
-      <RouterProvider router={router} />
-    </NewGameProvider>
+    <RouterProvider router={router} />
   </StrictMode>
 );

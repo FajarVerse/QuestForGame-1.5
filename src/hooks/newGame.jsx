@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNewGame, useNewGameDispatch } from "../context/NewGameContext";
 import { getNewGameList } from "../services/newgamelist.service";
 
 export const NewGame = () => {

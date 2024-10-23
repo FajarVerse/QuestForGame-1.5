@@ -5,8 +5,8 @@ const GameCards = (props) => {
 
   return (
     <>
-      <Link to={`/detail-game/${id}`}>
-        <div className="relative w-36 h-44 flex justify-center flex-shrink-0 bg-sunset overflow-hidden border-[3px] border-lightSunset drop-shadow-xl box-shadow md:h-48 lg:w-44 lg:h-60">
+      <Link to={`/detail-game/${id}`} className="group">
+        <div className="relative w-36 h-44 flex justify-center flex-shrink-0 bg-sunset overflow-hidden border-[3px] border-lightSunset drop-shadow-xl box-shadow md:h-48 lg:w-44 lg:h-60 group-hover:scale-95 transition duration-300 ease-in-out">
           {children}
         </div>
       </Link>
