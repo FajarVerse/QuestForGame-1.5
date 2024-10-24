@@ -11,7 +11,7 @@ const AboutSection = () => {
         <div className="w-full mx-auto flex flex-wrap lg:items-center xl:px-10">
           <div className="w-full mx-auto px-5 md:px-10 lg:w-1/2 xl:w-[60%] xl:pr-10">
             <SubHeader className="text-second text-center lg:text-left">
-              Apa itu Quest<span className="text-primary">ForGame</span> ??
+              What is Quest<span className="text-primary">ForGame</span> ??
             </SubHeader>
           </div>
           <div className="w-full block lg:flex lg:flex-row-reverse lg:items-center">
@@ -27,31 +27,29 @@ const AboutSection = () => {
                 <span className="font-montserrat font-semibold text-second tracking-wider">
                   Quest<span className="text-primary">ForGame </span>
                 </span>
-                merupakan platfrom digital yang dibangun dengan berfokus kepada
-                panduan dan informasi terkini tentang berbagai games terupdate.
-                Website ini bertujuan untuk membantu para gamers menemukan game
-                yang sesuai untuk mereka dengan menyediakan game dengan berbagai
-                macam kategori, mulai dari genre populer, game indie, hingga
-                judul-judul terpopuler.
+                is a digital platform built with a focus on The latest guides
+                and information about various updated games. This website aims
+                to help gamers find games that suits them by providing games
+                with a variety various categories, ranging from popular genres,
+                indie games, to most popular titles.
               </Description>
               <Description>
-                Kami mengambil semua data game yang ada melalui API yang
-                disediakan oleh{" "}
+                We retrieve all existing game data via the API provided by{" "}
                 <Link
                   to={"/https://rawg.io/apidocs"}
                   className="font-semibold italic cursor-pointer"
                 >
                   RAWG
                 </Link>
-                , sehingga dapat terjamin keamanannya.
+                , so that security can be guaranteed.
               </Description>
               <Description>
-                Singkatnya,{" "}
+                In short,{" "}
                 <span className="font-montserrat font-semibold text-second tracking-wider">
                   Quest<span className="text-primary">ForGame </span>
                 </span>
-                adalah tempat yang ideal bagi para gamer untuk menemukan dan
-                menjelajahi dunia game secara mendalam.
+                is the ideal place for gamers to find and explore the game world
+                in depth
               </Description>
             </div>
           </div>

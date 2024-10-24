@@ -1,11 +1,10 @@
-import { Fragment } from "react"
+import { Fragment } from "react";
 import AuthLayout from "../../layouts/AuthLayout";
 import Description from "../../elements/Description";
 import Button from "../../elements/Button";
 import LastBgHome from "../../../assets/Image/last_home_bg.jpg";
 
 const LastSection = () => {
-
   return (
     <Fragment>
       <AuthLayout
@@ -15,10 +14,13 @@ const LastSection = () => {
         <div className="relative z-20">
           <div className="w-full px-5 py-5 md:px-10 lg:px-32">
             <Description className="font-extrabold text-lg text-center mb-5 lg:text-[1.5rem] lg:font-extrabold lg:mb-7 xl:text-[1.8rem]">
-              Siap untuk tantangan? Ayo mulai petualanganmu dan temukan game
-              terbaikmu sekarang!
+              Ready for the challenge? Let's start your adventure and discover
+              the game your best now!
             </Description>
-            <Button className="mx-auto text-lg px-5 xl:text-xl xl:py-1.5" link={"/games"}>
+            <Button
+              className="mx-auto text-lg px-5 xl:text-xl xl:py-1.5"
+              link={"/games"}
+            >
               Let's Start Your Adventure{" "}
               <span>
                 <svg
@@ -38,6 +40,6 @@ const LastSection = () => {
       </AuthLayout>
     </Fragment>
   );
-}
+};
 
-export default LastSection
+export default LastSection;

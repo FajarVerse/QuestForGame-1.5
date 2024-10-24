@@ -1,6 +1,6 @@
 import DetailGameFragment from "../components/fragments/DetailGames/DetailGameFragment";
 
-const DetailGames = () => {
+const DetailGamesPage = () => {
   return (
     <>
       <DetailGameFragment />
@@ -8,4 +8,4 @@ const DetailGames = () => {
   );
 };
 
-export default DetailGames;
+export default DetailGamesPage;

@@ -24,7 +24,7 @@ const HeroSection = () => {
                   Quest<span className="text-primary">ForGame</span>
                 </Header>
                 <Description className="font-montserrat -mb-2 font-semibold md:text-lg xl:text-xl xl:mt-3">
-                  Jelajahi dunia games, dan temukan game impian mu
+                  Explore the world of games, and find your dream game
                 </Description>
               </div>
               <div className="flex justify-center">

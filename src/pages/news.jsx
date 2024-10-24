@@ -1,6 +1,6 @@
 import ComingSoon from "../components/fragments/ComingSoon";
 
-const News = () => {
+const NewsPage = () => {
     return (
       <>
         <ComingSoon />
@@ -8,4 +8,4 @@ const News = () => {
     );
 };
 
-export default News;
+export default NewsPage;

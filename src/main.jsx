@@ -2,37 +2,39 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import DetailGames from "./pages/detailgames.jsx";
-import Games from "./pages/games.jsx";
-import Home from "./pages/home.jsx";
-import Movies from "./pages/movies.jsx";
-import News from "./pages/news.jsx";
+import DetailGamesPage from "./pages/detailgames.jsx";
+import ErrorPage from "./pages/error.jsx";
+import GamesPage from "./pages/games.jsx";
+import HomePage from "./pages/home.jsx";
+import MoviesPage from "./pages/movies.jsx";
+import NewsPage from "./pages/news.jsx";
 
 const router = createBrowserRouter(
   [
     {
       path: "/",
-      element: <Home />,
+      element: <HomePage />,
+      errorElement: <ErrorPage />,
     },
     {
       path: "/home",
-      element: <Home />,
+      element: <HomePage />,
     },
     {
       path: "/games",
-      element: <Games />,
+      element: <GamesPage />,
     },
     {
       path: "/movies",
-      element: <Movies />,
+      element: <MoviesPage />,
     },
     {
       path: "/news",
-      element: <News />,
+      element: <NewsPage />,
     },
     {
       path: "/detail-game/:id",
-      element: <DetailGames />,
+      element: <DetailGamesPage />,
     },
   ],
   { basename: "/QuestForGame-1.5/" }

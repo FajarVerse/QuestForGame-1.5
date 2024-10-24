@@ -19,8 +19,8 @@ const SummarySection = () => {
         <div className="w-full mx-auto px-5 flex flex-wrap md:px-10 xl:px-14">
           <div className="w-full">
             <SubHeader className="text-white text-center ">
-              Jelajahi Rilisan{" "}
-              <span className="text-primary">Game Terupdate</span>
+              Explore the Latest{" "}
+              <span className="text-primary">Game Release</span>
             </SubHeader>
           </div>
           <div className="w-full py-3 block lg:flex lg:items-center lg:gap-5 xl:gap-10">
@@ -33,13 +33,13 @@ const SummarySection = () => {
             </div>
             <div className="w-full lg:w-[55%]">
               <Description className="text-center lg:text-left">
-                Temukan game-game terupdate yang sedang hype di dunia gaming!
-                Lengkap dengan rating dan tanggal rilisnya.
+                Find the latest games that are currently hyped in the gaming
+                world! Complete with rating and release date.
               </Description>
               <CardLayout cardContentRef={cardContentRef}>
                 {dataGame.length > 0 &&
                   dataGame.map((game) => (
-                    <GameCards key={game.id}>
+                    <GameCards key={game.id} id={game.id}>
                       <GameCards.CardImage
                         image={game.background_image}
                         titleImage={game.name}

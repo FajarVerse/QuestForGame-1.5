@@ -19,7 +19,7 @@ const GamesFragment = () => {
               <span className="text-primary">Gaming Experiences</span>
             </Header>
             <Description className="text-center  lg:text-xl xl:mt-7">
-              Temukan game yang kamu cari disini!!
+              Find the game you are looking for here!!
             </Description>
           </div>
           <div>

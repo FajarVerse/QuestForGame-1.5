@@ -1,6 +1,6 @@
 import HomeFragment from "../components/fragments/Home/HomeFragment";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <>
       <HomeFragment />
@@ -8,4 +8,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

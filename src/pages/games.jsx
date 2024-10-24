@@ -1,6 +1,6 @@
 import GamesFragment from "../components/fragments/Games/GamesFragment";
 
-const Games = () => {
+const GamesPage = () => {
   return (
     <>
       <GamesFragment />
@@ -8,4 +8,4 @@ const Games = () => {
   );
 };
 
-export default Games;
+export default GamesPage;

@@ -1,6 +1,6 @@
 import ComingSoon from "../components/fragments/ComingSoon";
 
-const Movies = () => {
+const MoviesPage = () => {
   return (
     <>
       <ComingSoon />
@@ -8,4 +8,4 @@ const Movies = () => {
   );
 };
 
-export default Movies;
+export default MoviesPage;
