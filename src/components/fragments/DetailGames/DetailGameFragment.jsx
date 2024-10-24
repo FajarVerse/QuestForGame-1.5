@@ -29,7 +29,7 @@ const DetailGameFragment = () => {
         className="pt-32 pb-16 relative backdrop-bg hero lg:pb-32"
       >
         <div className="relative w-full px-5 z-20">
-          <Header className="text-primary">{dataDetail.name}</Header>
+          <Header className="text-second text-center">{dataDetail.name}</Header>
         </div>
       </AuthLayout>
       <AuthLayout background="bg-dark" className="pt-0">
