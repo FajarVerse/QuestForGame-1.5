@@ -36,6 +36,10 @@ const router = createBrowserRouter(
       path: "/detail-game/:id",
       element: <DetailGamesPage />,
     },
+    {
+      path: "*",
+      element: <ErrorPage />,
+    },
   ],
   { basename: "/QuestForGame-1.5/" }
 );
