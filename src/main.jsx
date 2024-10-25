@@ -40,8 +40,7 @@ const router = createBrowserRouter(
       path: "*",
       element: <ErrorPage />,
     },
-  ],
-  { basename: "/QuestForGame-1.5/" }
+  ]
 );
 
 createRoot(document.getElementById("root")).render(
