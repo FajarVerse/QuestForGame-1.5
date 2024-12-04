@@ -30,7 +30,7 @@ const Navbar = () => {
         className="w-full bg-transparent mx-auto px-5 py-4 transition duration-500 ease-in-out rounded-[0] lg:px-10"
         ref={HeaderRef}
       >
-        <div className="container">
+        <div className="container mx-auto">
           <div className="flex items-center justify-between relative">
             <div className="px-1">
               <a
